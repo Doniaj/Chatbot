@@ -1,0 +1,82 @@
+{
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 465,
+    "login": "fonitex.noreply@gmail.com",
+    "password": "pxed fwus ohkx kpyc",
+    "default_from": "fonitex.noreply@gmail.com",
+    "default_from_name": "Admin Support"
+  },
+  "development": {
+    "host": "95.216.63.42",
+    "username": "stage_pdrv",
+    "password": "Stage2025.",
+    "database": "pdrv",
+    "port": 5432,
+    "dialect": "postgres",
+    "databases": {
+      "crm-app": {
+        "host": "95.216.63.42",
+        "username": "stage_pdrv",
+        "password": "Stage2025.",
+        "database": "pdrv",
+        "port": 5432,
+        "dialect": "postgres",
+        "underscored": true,
+        "define": {
+          "createdAt": "created_at",
+          "updatedAt": "updated_at"
+        },
+        "dialectOptions": {
+          "options": {
+            "requestTimeout": 30000
+          }
+        },
+        "pool": {
+          "acquire": 100000000,
+          "idle": 100000
+        }
+      }
+    },
+    "urlClient": "http://localhost:3006/",
+    "baseUrl" : "http://localhost:3001/api",
+    "PORT": 2001,
+    "socketUrl": "https://dev-rdv-api.fonicom.io.fonicom.io:4002"
+  },
+  "production": {
+    "dialect": "postgres",
+    "databases": {
+      "crm-app": {
+        "host": "95.216.63.42",
+        "username": "postgres",
+        "password": "Fonitex2024.",
+        "database": "pdrv",
+        "port": 5432,
+        "dialect": "postgres",
+        "underscored": true,
+        "define": {
+          "createdAt": "created_at",
+          "updatedAt": "updated_at"
+        },
+        "dialectOptions": {
+          "options": {
+            "requestTimeout": 30000
+          }
+        },
+        "pool": {
+          "acquire": 100000000,
+          "idle": 100000
+        }
+      }
+    },
+    "baseUrl" : "https://dev-rdv-api.fonicom.io.fonicom.io/api",
+    "urlClient": "https:/dev-rdv.fonicom.io",
+    "PORT": 3004,
+    "socketUrl": "https://dev-rdv-api.fonicom.io.fonicom.io:4002"
+  },
+  "secret": "'BL#,miQFau,amA!?FFW@oKO3<_<E-j-]PVO65d!c%|V2h{(3#~~*$8{X<H}BVm",
+  "tz": "Europe/Paris",
+  "salt": "$2b$10$TOzGnzuUQjfTzmecOw7NKe",
+  "path_empreint" : "https://staging-api.fonivoice.com/api/playAudio/efile-2.wav",
+  "path_processF5" : "http://136.243.21.108:2001/api/processF5"
+}

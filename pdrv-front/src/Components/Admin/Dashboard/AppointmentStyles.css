@@ -1,0 +1,146 @@
+.appointment-status-card .timing-info {
+    margin-top: 0.75rem;
+}
+
+.appointment-status-card .client-name {
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    color: #374151 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.appointment-status-card .timing-info small {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 0.25rem !important;
+    display: block !important;
+}
+
+.appointment-status-card .timing-info i {
+    font-size: 1.1rem !important;
+    margin-right: 0.5rem !important;
+    width: 1.25rem !important;
+    text-align: center !important;
+}
+
+.appointment-status-card .timing-info .text-success {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.appointment-status-card .timing-info .text-warning {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.appointment-status-card .timing-info .text-primary {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.appointment-status-card .timing-info .text-danger {
+    font-size: 1.15rem !important;
+    font-weight: 600 !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.appointment-status-card .countdown-info .fs-5 {
+    font-size: 1.2rem !important;
+    font-weight: 600 !important;
+}
+
+.appointment-status-card .countdown-info .fs-6 {
+    font-size: 1.05rem !important;
+    font-weight: 500 !important;
+}
+
+.appointment-status-card .countdown-info small,
+.appointment-status-card .timing-info small:not(.fw-bold) {
+    font-size: 0.9rem !important;
+    color: #6B7280 !important;
+    font-weight: 400 !important;
+}
+
+.appointment-status-card .badge {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.6rem !important;
+    font-weight: 500 !important;
+}
+
+.appointment-status-card .card-body {
+    padding: 1.25rem !important;
+}
+
+.appointment-status-card {
+    transition: all 0.2s ease !important;
+}
+
+.appointment-status-card:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.pulse-animation {
+    animation: subtlePulse 3s infinite !important;
+}
+
+@keyframes subtlePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(22, 163, 74, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(22, 163, 74, 0);
+    }
+}
+
+.appointment-status-card .btn-group .btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+}
+
+.appointment-status-card .btn-group .btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.appointment-status-card .avatar-sm {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+}
+
+.appointment-status-card .avatar-title {
+    font-size: 1.2rem !important;
+}
+
+@media (max-width: 768px) {
+    .appointment-status-card .timing-info small {
+        font-size: 0.85rem !important;
+    }
+
+    .appointment-status-card .timing-info .text-success,
+    .appointment-status-card .timing-info .text-warning {
+        font-size: 1.05rem !important;
+    }
+
+    .appointment-status-card .timing-info .text-primary {
+        font-size: 1.15rem !important;
+    }
+
+    .appointment-status-card .client-name {
+        font-size: 1.05rem !important;
+    }
+}
+
+.appointment-status-card .timing-info .fw-bold {
+    padding: 0.1rem 0.3rem !important;
+    border-radius: 4px !important;
+    background-color: rgba(0,0,0,0.05) !important;
+}

@@ -1,0 +1,281 @@
+/*
+Template Name: Toner eCommerce + Admin HTML Template
+Author: Themesbrand
+Website: https://themesbrand.com/
+Contact: support@themesbrand.com
+File: Custom Css File
+*/
+@import "_variables";
+$form-select-hover-bg: #007bff;  // Hover background color
+$form-select-hover-color: #fff;
+$form-select-selected-bg: #0056b3;  // Background for selected option
+$form-select-selected-color: #fff;  // Text color for selected option
+$form-select-disabled-bg: #f1f1f1;  // Disabled background
+$form-select-disabled-color: #888;  // Disabled text color
+.disabledColor {
+  background-color: #F2F2F2!important;
+  color : #9C9C9C!important;
+  font-weight: 400!important;
+  font-size: 14px!important;
+  font-family: Switzer, serif;
+}
+.disabledColorGreen {
+  background-color: rgba(143, 246, 143, 0.9) !important;
+  color : rgba(0, 199, 2, 0.9) !important;
+  font-weight: 400!important;
+  font-size: 14px!important;
+  font-family: Switzer, serif;
+}
+.backgroundYellow{
+  background-color: #ffff00!important;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.colorTemp {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-item-navbar {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Space between the icon and text */
+  padding: 0.5rem 1rem;
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+.nav-item-navbar .nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Adjust font size */
+}
+
+.nav-item-navbar .nav-link div span {
+  font-size: 1rem; /* Adjust font size */
+font-weight: bold;
+}
+
+.nav-item-navbar:hover .nav-link div span {
+    color: #38bdf8; /* Hover effect text color */
+}
+.nav-item-navbar:hover {
+    background-color: rgb(244, 244, 244) !important;
+}
+
+.nav-item-navbar .bi {
+  font-size: 1.5rem; /* Icon size */
+  padding: 0.25rem; /* Padding around the icon */
+  border-radius: 50%; /* Make the icon circular */
+}
+
+.nav-item-navbar .nav-description {
+  font-size: 0.875rem; /* Slightly smaller font */
+  margin-top: 0.25rem; /* Space between title and description */
+}
+
+.errorField {
+  border: 1px solid red !important;
+  border-radius: 4px;
+}
+.options-select {
+  background-color: $form-select-bg !important;
+  color: $form-select-color !important;
+  padding: 0.5rem !important;
+  font-size: 1rem !important;
+  font-family: Arial, sans-serif !important;
+  border: 1px solid $form-select-border-color !important; /* Add a border */
+  border-radius: 4px !important; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important; /* Subtle shadow for depth */
+  outline: none !important; /* Remove default outline on focus */
+  transition: box-shadow 0.2s ease, border-color 0.2s ease !important; /* Smooth transition for hover and focus */
+}
+
+/* Hover effect for the select dropdown */
+.options-select:hover {
+  border-color: $primary !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Style for individual options inside the dropdown */
+.options-select option {
+  padding: 0.5rem;
+  border: none;
+}
+
+/* Hover effect for option */
+.options-select option:hover {
+  background-color: $form-select-hover-bg;
+  color: $form-select-hover-color;
+}
+
+/* Selected option styles */
+.options-select option:checked, .options-select option[selected] {
+  background-color: $form-select-selected-bg;
+  color: $form-select-selected-color;
+}
+
+/* Disabled option styles */
+.options-select option:disabled {
+  background-color: $form-select-disabled-bg;
+  color: $form-select-disabled-color;
+}
+  //.options-select {
+  //  background-color: $form-select-bg; // Same background as the select element
+  //  color: $form-select-color; // Text color
+  //  padding: $form-select-padding-y $form-select-padding-x; // Padding for a clean look
+  //  font-family: $form-select-font-family;
+  //  @include font-size($form-select-font-size);
+  //  font-weight: $form-select-font-weight;
+  //  line-height: $form-select-line-height;
+  //
+  //  // Add hover effect for the options
+  //  &:hover {
+  //    background-color: #f8f9fa; // Add a hover background color
+  //    color: #0056b3; // Adjust text color on hover
+  //  }
+  //
+  //  &:checked,
+  //  &:selected {
+  //    background-color: #007bff; // Background for selected option
+  //    color: #212529; // Text color for selected option
+  //  }
+  //
+  //  &:disabled {
+  //    background-color: $form-select-disabled-bg; // Background for disabled options
+  //    color: $form-select-disabled-color; // Text color for disabled options
+  //  }
+  //}
+.textarea-container {
+  position: relative;
+  width: 100%;
+  border: 1px solid $form-select-border-color;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 0.5em;
+  font-family: Arial, sans-serif;
+  background-color: var(--tb-secondary-bg);
+}
+
+.header-row-textarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+.textarea-container hr {
+  border: none;
+  border-top: 1px solid #d9d9d9;
+  margin: 0.5em 0;
+}
+.header-row-textarea span:first-child {
+  font-weight: bold;
+  color: #b30000; /* Red color for count text */
+}
+
+.textarea-text {
+  width: 100%;
+  min-height: 160px;
+  resize: vertical;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5em;
+  font-family: inherit;
+  background-color: var(--tb-secondary-bg);
+}
+
+.textarea-text:focus {
+  border: none;
+  outline: none;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side,$primary 90%, rgba(0, 0, 0, 0)) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l1 1s steps(4) infinite;
+}
+@keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center!important;
+  width: 40px; /* Adjust the size of the circle */
+  height: 40px; /* Adjust the size of the circle */
+  border: 2px solid $primary; /* Circle border color and thickness */
+  border-radius: 50%; /* Makes the div a circle */
+  background-color: transparent; /* Transparent background */
+  color: $primary; /* Icon color */
+  font-size: 20px; /* Adjust the size of the icon */
+}
+
+.icon-circle i {
+  line-height: 1; /* Ensures the icon is centered vertically */
+}
+.custom-loader-generate-container {
+  display: flex;
+  align-items: center !important;
+  min-height: 2.5em;
+}
+.loader-purchase {
+  min-height: 1.5em!important;
+}
+.custom-loader-generate {
+  width: 20px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, $primary 90%, rgba(0, 0, 0, 0)) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l2 1s steps(4) infinite;
+}
+.loader-generate-purchase {
+  width: 30px!important;
+  background: radial-gradient(circle closest-side, #fff 90%, rgba(0, 0, 0, 0)) 0/calc(100%/3) 100% space!important;
+}
+.custom-loader-generate .disabled {
+  width: 20px;
+  aspect-ratio: 4;
+  background: radial-gradient(circle closest-side, $primary 90%, rgba(0, 0, 0, 0)) 0/calc(100%/3) 100% space;
+  clip-path: inset(0 100% 0 0);
+  animation: l2 1s steps(4) infinite;
+  cursor : not-allowed;
+}
+.disabled-generate {
+  border: 2px solid #8a8a8a; /* Circle border color and thickness */
+  border-radius: 50%; /* Makes the div a circle */
+  background-color: transparent; /* Transparent background */
+  color: #8a8a8a;
+}
+@keyframes l2 {to{clip-path: inset(0 -34% 0 0)}}
+
+.icon-drop {
+  display: flex;
+  align-items: center;
+  justify-content: center!important;
+  width: 40px; /* Adjust the size of the circle */
+  height: 40px; /* Adjust the size of the circle */
+  color: $primary; /* Icon color */
+  font-size: 20px; /* Adjust the size of the icon */
+}
+
+.icon-drop i {
+  line-height: 1; /* Ensures the icon is centered vertically */
+}
+.wavesurfer-container{
+  width: 95%;
+}
+
+
+.reactflow-wrapper{
+  flex-grow: 1;
+  height: auto;
+  min-height: 600px;
+
+}

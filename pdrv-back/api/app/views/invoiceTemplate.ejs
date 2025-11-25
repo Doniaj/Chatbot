@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <!-- Custom Stylesheet -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 10px;
+        }
+        .container{
+            width: 100%;
+        }
+        .header{
+            overflow: auto;
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .company-information{
+            text-align: end;
+            float: right;
+        }
+        .Dim-Receiver-information{
+            width: 90%;
+            margin: auto;
+            overflow: auto;
+        }
+        .Dim-Receiver-information p {
+            font-size: small;
+            line-height: 18px;
+        }
+        .Dim-information{
+            width: 44%;
+            background: #E3E3E3;
+            color:#212969;
+            border: 2px #E3E3E3 solid;
+            padding: 2%;
+            font-size: 10px;
+            float: left;
+        }
+        .Receiver-information{
+            width: 44%;
+            border: 2px #bebebe solid;
+            padding: 2%;
+            font-size: 10px;
+            float: right;
+        }
+        .INVOICE-TABLE{
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
+        }
+        table.INVOICE-TABLE-INSIDE {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #bebebe;
+        }
+        table.INVOICE-TABLE-INSIDE th {
+            border: 2px solid #bebebe;
+            font-size: 10px;
+        }
+        table.INVOICE-TABLE-INSIDE td {
+            border-left: 2px solid #bebebe;
+            border-right: 2px solid #bebebe;
+            padding: 10px;
+            text-align: left;
+            font-size: 10px;
+            height: 20px;
+            vertical-align: top;
+        }
+        .TOTAL-Invoice{
+            overflow: auto;
+            width: 90%;
+            margin: auto;
+            padding: 20px 0;
+        }
+        .TOTAL-information{
+            width: 50%;
+            float: right;
+        }
+        .TOTAL-general-information{
+            width: 30%;
+            float: right;
+        }
+        .TOTAL-payment{
+            width: 40%;
+            float: left;
+        }
+        .TOTAL-ROW{
+            overflow: auto;
+            margin: 10px 0;
+        }
+        .TOTAL-ROW-PAYMENT{
+            overflow: auto;
+            margin: 10px 0;
+        }
+        .TOTAL{
+            background-color: #E3E3E3;
+            color: #212969;
+            padding: 2px;
+            font-weight:bold;
+        }
+        .Receiver-information-entity{
+            font-weight: bold;
+        }
+        .c-pill {
+            align-items: center;
+            font-family: "Open Sans", Arial, Verdana, sans-serif;
+            font-weight: bold;
+            font-size: 9px;
+            display: inline-block;
+            height: 100%;
+            white-space: nowrap;
+            width: auto;
+            position: relative;
+            border-radius: 100px;
+            overflow: hidden;
+            padding: 0 20px 0 20px;
+            text-overflow: ellipsis;
+            line-height: 1.25rem;
+            color: #595959;
+            word-break: break-word;
+        }
+        .mb-2 {
+            margin-bottom: 2px;
+        }
+
+
+        .c-pill--paid {
+            background: #DBF3F0;
+            color: #06d6a0;
+        }
+        .c-pill--unpaid {
+            background: #F2E4EB;
+            color: #dc3545;
+        }
+        .c-pill--yellow {
+            background: #ffecb4;
+            color: #b78f07;
+        }
+        .c-pill--blue {
+            background: #cadaff;
+            color: #083391;
+        }
+        .c-pill--black {
+            background: #74777a;
+            color: #161a26;
+        }
+        .fz-fixed {
+            font-size: 10px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .text-bold{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Invoice start -->
+<div class="container">
+    <div class="header">
+        <div class="logo" style="float: left;">
+            <img src="data:image/png;base64,<%= image %>" alt="" style="width: 100px;">
+        </div>
+        <div class="TOTAL-general-information">
+            <div class="TOTAL-ROW">
+                <p style="float: left;">Invoice N° :</p><p style="float: right;"><%= Invoice.code %></p>
+            </div>
+            <div class="TOTAL-ROW">
+                <p style="float: left;">Invoice Date :</p><p style="float: right;"><%= Invoice.date %></p>
+            </div>
+            <div class="TOTAL-ROW">
+                <p style="float: left;">Payment Status :</p><span style="float: right;" class="c-pill c-pill--<%= Invoice.status %>"><%= Invoice.status %></span>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="Dim-Receiver-information">
+        <div class="Dim-information">
+            <h4 class="text-center text-bold">Transmitter</h4>
+            <p><span class="Receiver-information-entity">Legal Registration N°: </span><span class="fz-fixed"><%= User.registration %></span></p>
+            <p><span class="Receiver-information-entity">email : </span><span class="fz-fixed"><%= User.email %></span></p>
+            <p><span class="Receiver-information-entity">phone number : </span><span class="fz-fixed"><%= User.contact %></span></p>
+            <p><span class="Receiver-information-entity">social reason : </span><span class="fz-fixed"><%= User.social_reason %></span></p>
+            <p><span class="Receiver-information-entity">address : </span><span class="fz-fixed"><%= User.address %>, <%= User.city %></span></p>
+        </div>
+        <div class="Receiver-information">
+            <h4 class="text-center">Receiver Client</h4>
+            <p><span class="Receiver-information-entity">username : </span><span class="fz-fixed"><%= Client.username %></span></p>
+            <p><span class="Receiver-information-entity">email : </span><span class="fz-fixed"><%= Client.email %></span></p>
+            <p><span class="Receiver-information-entity">phone number : </span><span class="fz-fixed"><%= Client.phone_number %></span></p>
+            <p><span class="Receiver-information-entity">social reason : </span><span class="fz-fixed"><%= Client.social_reason %></span></p>
+            <p><span class="Receiver-information-entity">address : </span><span class="fz-fixed"><%= Client.address %></span></p>
+        </div>
+    </div>
+    <div class="INVOICE-TABLE">
+        <table class="INVOICE-TABLE-INSIDE">
+            <thead>
+            <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price (DT)</th>
+                <th scope="col">Discount (DT)</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total HT (DT)</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <% Invoice.tableInvoice.forEach(function(item) { %>
+                <tr>
+                    <td><%= item.product_title %></td>
+                    <td><%= item.product_description %></td>
+                    <td><%= item.price %></td>
+                    <td><%= item.discount %></td>
+                    <td><%= item.quantity %></td>
+                    <td><%= item.total %></td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </div>
+    <div class="TOTAL-Invoice">
+        <div class="TOTAL-payment">
+            <div class="TOTAL-ROW-PAYMENT">
+                <p style="float: left;">Payment Methode : </p><p style="float: right;"><%= Invoice.payment_methode %></p>
+            </div>
+            <% if (Invoice.payment_methode === 'check') { %>
+                <div class="TOTAL-ROW-PAYMENT">
+                    <p style="float: left;">Date Check : </p><p style="float: right;"><%= Invoice.date_check %></p>
+                </div>
+                <div class="TOTAL-ROW">
+                    <p style="float: left;">Num Check : </p><p style="float: right;"><%= Invoice.num_check %></p>
+                </div>
+            <% } %>
+            <% if (Invoice.payment_methode === 'transfer') { %>
+                <div class="TOTAL-ROW">
+                    <p style="float: left;"> Reference : </p><p style="float: right;"><%= Invoice.ref %></p>
+                </div>
+            <% } %>
+        </div>
+        <div class="TOTAL-information">
+            <div class="TOTAL-ROW">
+                <p style="float: left;">Total HT</p><p style="float: right;"><%= Invoice.total %> DT</p>
+            </div>
+            <div class="TOTAL-ROW">
+                <p style="float: left;">Total TVA<%= Invoice.TAX %></p><p style="float: right;"><%= Invoice.TOTAL_TVA %></p>
+            </div>
+            <div class="TOTAL-ROW TOTAL">
+                <p style="float: left;">Total TTC</p><p style="float: right;"><%= Invoice.ttc %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

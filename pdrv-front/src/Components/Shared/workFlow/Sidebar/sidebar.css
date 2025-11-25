@@ -1,0 +1,408 @@
+.save_update {
+    background-color: #07529B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save_update:disabled {
+    cursor: not-allowed;
+}
+
+.save-container {
+    margin-top: 25px;
+}
+
+.save-button {
+    padding: 10px 15px;
+    background-color: rgba(16, 96, 170, 0.8);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-group {
+    margin-top: 15px;
+}
+
+.select-group {
+    margin-top: 20px;
+}
+
+.form-input {
+    margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+}
+.script-section {
+    margin-top: 15px;
+}
+
+.script-textarea {
+    width: 100%;
+    height: 100px;
+    color: black;
+    margin-top: 5px;
+    padding: 8px;
+}
+
+.script-audio-preview {
+    margin-top: 10px;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audio-player {
+    flex-grow: 1;
+}
+
+
+.script-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.generate-audio-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    background-color: #c60505;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.sidebar-container{
+    padding: 30px;
+}
+.draggable-node {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: grab;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.button-back {
+    margin-bottom: 30px;
+}
+
+.generate-audio-button.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.audio-section {
+    margin-top: 15px;
+}
+
+.audio-input {
+    margin-top: 5px;
+}
+
+.audio-preview {
+    margin-top: 10px;
+}
+
+.audio-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audio-player {
+    flex-grow: 1;
+}
+.label-input-section {
+    margin-top: 20px;
+}
+
+.label-input {
+    padding: 5px;
+    width: 100%;
+}
+
+.content-type-section {
+    margin-top: 15px;
+}
+
+.content-type-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.content-type-button {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.content-type-button.active-button {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.page-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+}
+
+
+
+.workflow-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.workflow-header {
+    padding: 10px;
+    text-align: center;
+
+}
+
+.save_update {
+    padding: 10px 20px;
+    background-color: #07529B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.sidebar-dark {
+    background-color: #1e1e2f;
+    color: white;
+}
+
+.sidebar-light {
+    background-color: white;
+    color: black;
+}
+
+
+.save_update:hover:not(:disabled) {
+    background-color: #2c95fa;
+}
+
+.save_update:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.reactflow-container {
+    flex-grow: 1;
+    position: relative;
+}
+
+.sidebar-dark {
+    background-color: #1e1e2f;
+    color: white;
+}
+
+.sidebar-light {
+    background-color: white;
+    color: black;
+}
+.flow-container {
+    display: flex;
+    height: 90vh;
+}
+
+
+.sidebar {
+    width: 350px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    color: #ffffff;
+    position: relative;
+    height: auto;
+    overflow-y: auto;
+}
+.sidebar-dark {
+    background-color: #1e1e2f;
+    color: white;
+}
+
+.sidebar-light {
+    background-color: white;
+    color: black;
+}
+
+/* Ajout des styles pour sidebar-tools */
+.sidebar-tools {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* En mode sombre, texte blanc */
+.sidebar-dark .sidebar-tools {
+    color: white;
+}
+
+/* En mode clair, texte foncé */
+.sidebar-light .sidebar-tools {
+    color: #404040;
+}
+
+/* Si vous avez des éléments spécifiques dans sidebar-tools qui nécessitent des styles particuliers */
+.sidebar-dark .sidebar-tools h4,
+.sidebar-dark .sidebar-tools .tool-title {
+    color: white;
+}
+
+.sidebar-light .sidebar-tools h4,
+.sidebar-light .sidebar-tools .tool-title {
+    color: #333;
+}
+
+.sidebar h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar input,
+.sidebar select {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #2c3e50;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+.sidebar input:focus,
+.sidebar select:focus {
+    border: 2px solid #ffffff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255,255,255,0.7);
+}
+
+
+.sidebar button {
+    margin-top: 10px;
+    padding: 14px 20px;
+    background-color: #07529B;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+
+.delete_workflow {
+    margin-left: 20px;
+    background-color: #ff0f00; /* Rouge vif */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete_workflow:hover {
+    background-color: #bf7e7a;
+    transform: scale(1.02);
+}
+
+.delete_workflow:disabled {
+    background-color: #e0e0e0;
+    color: #888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+
+.sidebar button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #1565c0 0%, #3b629c 100%);
+}
+
+.sidebar button:active {
+    transform: translateY(0);
+    background: linear-gradient(135deg, #0d47a1 0%, #08306b 100%);
+}
+
+.sidebar label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #404040;
+    display: block;
+}
+
+.sidebar div {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sidebar h3 {
+        font-size: 22px;
+    }
+
+    .sidebar input,
+    .sidebar select {
+        padding: 10px;
+    }
+
+    .sidebar button {
+        font-size: 15px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.sidebar > * {
+    animation: fadeIn 0.6s ease-out;
+}
